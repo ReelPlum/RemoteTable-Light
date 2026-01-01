@@ -61,6 +61,7 @@ end
 local function Unregister(name: TokenName)
 	local name = SanitizeForAttributeName(name)
 	local token = TokenLookup[name]
+	if not token then return end
 	TokenNames[token] = nil
 	
 	local promise = TokenPromises[name]
