@@ -302,8 +302,14 @@ end
 
 function Server.Get(token_name: string): any?
 	if not TokenRegistry.IsTokenRegistered(token_name) then return nil end
+	
 	local token = TokenRegistry.GetToken(token_name)
-	return RemoteTables[token]
+	if not token then return nil end
+	
+	local remote_table = RemoteTables[token]
+	if not remote_table then return nil end
+	
+	return remote_table.Data
 end
 
 function Server.Destroy<T>(token_name: string)
