@@ -1,0 +1,10 @@
+[package]
+name = "reelplum/remotetable-light"
+description = "My upload of the remotetable-light module: https://github.com/Brawldude2/RemoteTable-Light"
+license = "lgpl-3.0"
+version = "0.1.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+exclude = ["aftman.toml", "LICENSE", "Examples"]
+
+[dependencies]
